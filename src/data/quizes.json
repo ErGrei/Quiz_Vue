@@ -1,7 +1,7 @@
 [
   {
     "id": 1,
-    "img": "src/assets/01_fishing_line.jpg",
+    "img": "/01_fishing_line.jpg",
     "name": "Начальный уровень",
     "questions": [
       {
@@ -248,7 +248,7 @@
   },
   {
     "id": 2,
-    "img": "src/assets/02_average.jpg",
+    "img": "./02_average.jpg",
     "name": "Средний уровень",
     "questions": [
       {
@@ -465,7 +465,7 @@
   },
   {
     "id": 3,
-    "img": "src/assets/03_heavy.jpg",
+    "img": "/03_heavy.jpg",
     "name": "Продвинутый уровень",
     "questions": [
       {
@@ -681,4 +681,3 @@
     ]
   }
 ]
-

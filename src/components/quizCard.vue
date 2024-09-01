@@ -1,14 +1,20 @@
 <script setup>
 import { defineProps } from "vue";
+import { useRouter } from "vue-router";
 
+const router = useRouter();
 const { quiz } = defineProps(["quiz"]);
 
+const goToQuiz = () => {
+  router.push({ name: "quiz", params: { id: quiz.id } });
+};
 
-console.log(quiz);
+
+// console.log(quiz);
 </script>
 
 <template>
-  <div class="card">
+  <div :to="`/quiz`" class="card" @click="goToQuiz">
     <img
       :src="quiz.img"
       alt="Абстракный человечек задумывается на фоне красного вопроса"
