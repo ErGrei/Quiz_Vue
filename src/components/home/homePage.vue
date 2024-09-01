@@ -1,28 +1,24 @@
 <script setup>
-import quizes from "../data/quizes.json";
+import quizes from "../../data/quizes.json";
 import { ref } from "vue";
-import quizCard from "./quizCard.vue";
+import quizCard from "./homeCard.vue";
 
 const quizesRef = ref(quizes);
-
-
 </script>
 
 <template>
-    <header>
-      <h1>Quiz App</h1>
-      <!-- <input type="text" placeholder="Поиск..." /> -->
-    </header>
-    <div class="options-container">
-     <quizCard v-for="quiz in quizesRef" :key="quiz.id" :quiz="quiz" />
-    </div>
-
+  <header>
+    <h1>Quiz App</h1>
+    <!-- <input type="text" placeholder="Поиск..." /> -->
+  </header>
+  <div class="options-container">
+    <quizCard v-for="quiz in quizesRef" :key="quiz.id" :quiz="quiz" />
+  </div>
 </template>
 
 <script setup></script>
 
 <style scoped>
-
 header {
   margin: 30px 0;
   text-align: center;
@@ -54,6 +50,4 @@ header input {
   justify-content: center;
   gap: 20px;
 }
-
-
 </style>
