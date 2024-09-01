@@ -1,0 +1,905 @@
+{
+    "questions": [
+      {
+        "id": 1,
+        "text": "Что такое Proxy в JavaScript и как он работает?",
+        "options": [
+          {
+            "id": 1,
+            "label": "A",
+            "text": "Объект, который позволяет настроить поведение основных операций (например, чтение или запись свойств) с объектом.",
+            "isCorrect": true
+          },
+          {
+            "id": 2,
+            "label": "B",
+            "text": "Объект, который клонирует другой объект и добавляет к нему новые методы.",
+            "isCorrect": false
+          },
+          {
+            "id": 3,
+            "label": "C",
+            "text": "Функция, которая возвращает новый объект, объединяя два других объекта.",
+            "isCorrect": false
+          },
+          {
+            "id": 4,
+            "label": "D",
+            "text": "Механизм для создания цепочки объектов в JavaScript.",
+            "isCorrect": false
+          }
+        ]
+      },
+      {
+        "id": 2,
+        "text": "Как работает Event Loop в JavaScript?",
+        "options": [
+          {
+            "id": 1,
+            "label": "A",
+            "text": "Механизм, который обрабатывает асинхронные операции в порядке их вызова.",
+            "isCorrect": false
+          },
+          {
+            "id": 2,
+            "label": "B",
+            "text": "Механизм, который обеспечивает неблокирующее выполнение кода, обрабатывая стек вызовов и очередь задач.",
+            "isCorrect": true
+          },
+          {
+            "id": 3,
+            "label": "C",
+            "text": "Алгоритм, который обрабатывает ошибки и исключения в коде.",
+            "isCorrect": false
+          },
+          {
+            "id": 4,
+            "label": "D",
+            "text": "Метод, который создает новый поток для выполнения каждой функции.",
+            "isCorrect": false
+          }
+        ]
+      },
+      {
+        "id": 3,
+        "text": "Что такое WeakMap и как он отличается от Map?",
+        "options": [
+          {
+            "id": 1,
+            "label": "A",
+            "text": "WeakMap допускает только объекты в качестве ключей и автоматически удаляет их, если они больше не используются.",
+            "isCorrect": true
+          },
+          {
+            "id": 2,
+            "label": "B",
+            "text": "WeakMap не поддерживает итерацию и методы для проверки размера коллекции.",
+            "isCorrect": true
+          },
+          {
+            "id": 3,
+            "label": "C",
+            "text": "WeakMap можно использовать для хранения примитивных значений.",
+            "isCorrect": false
+          },
+          {
+            "id": 4,
+            "label": "D",
+            "text": "WeakMap хранит ключи и значения в виде строк.",
+            "isCorrect": false
+          }
+        ]
+      },
+      {
+        "id": 4,
+        "text": "Какой результат выполнения следующего кода? `console.log([] + {});`",
+        "options": [
+          {
+            "id": 1,
+            "label": "A",
+            "text": "'[object Object]'",
+            "isCorrect": true
+          },
+          {
+            "id": 2,
+            "label": "B",
+            "text": "'{}'",
+            "isCorrect": false
+          },
+          {
+            "id": 3,
+            "label": "C",
+            "text": "Ошибка",
+            "isCorrect": false
+          },
+          {
+            "id": 4,
+            "label": "D",
+            "text": "''",
+            "isCorrect": false
+          }
+        ]
+      },
+      {
+        "id": 5,
+        "text": "Как работает наследование в ES6 через ключевое слово 'extends'?",
+        "options": [
+          {
+            "id": 1,
+            "label": "A",
+            "text": "Позволяет создавать подклассы, которые наследуют свойства и методы суперклассов.",
+            "isCorrect": true
+          },
+          {
+            "id": 2,
+            "label": "B",
+            "text": "Создает новый объект, который имеет доступ ко всем методам базового класса.",
+            "isCorrect": false
+          },
+          {
+            "id": 3,
+            "label": "C",
+            "text": "Создает новый класс, который дублирует методы родительского класса.",
+            "isCorrect": false
+          },
+          {
+            "id": 4,
+            "label": "D",
+            "text": "Не позволяет переопределять методы родительского класса.",
+            "isCorrect": false
+          }
+        ]
+      },
+      {
+        "id": 6,
+        "text": "Что такое генераторы в JavaScript и как они работают?",
+        "options": [
+          {
+            "id": 1,
+            "label": "A",
+            "text": "Функции, которые могут быть приостановлены и возобновлены, возвращая промежуточные значения.",
+            "isCorrect": true
+          },
+          {
+            "id": 2,
+            "label": "B",
+            "text": "Функции, которые автоматически создают новые объекты при каждом вызове.",
+            "isCorrect": false
+          },
+          {
+            "id": 3,
+            "label": "C",
+            "text": "Функции, которые могут исполняться параллельно с другими функциями.",
+            "isCorrect": false
+          },
+          {
+            "id": 4,
+            "label": "D",
+            "text": "Функции, которые автоматически обрабатывают исключения в коде.",
+            "isCorrect": false
+          }
+        ]
+      },
+      {
+        "id": 7,
+        "text": "Что такое Reflect API в JavaScript?",
+        "options": [
+          {
+            "id": 1,
+            "label": "A",
+            "text": "Набор статических методов, которые дублируют методы объектов и функций.",
+            "isCorrect": false
+          },
+          {
+            "id": 2,
+            "label": "B",
+            "text": "Объект, предоставляющий методы для работы с объектами и функциями, аналогичные методам Proxy.",
+            "isCorrect": true
+          },
+          {
+            "id": 3,
+            "label": "C",
+            "text": "Функция, которая позволяет отображать содержимое объекта в виде строки.",
+            "isCorrect": false
+          },
+          {
+            "id": 4,
+            "label": "D",
+            "text": "Метод, который позволяет создавать копии объектов.",
+            "isCorrect": false
+          }
+        ]
+      },
+      {
+        "id": 8,
+        "text": "Как работает прототипное наследование в JavaScript?",
+        "options": [
+          {
+            "id": 1,
+            "label": "A",
+            "text": "Каждый объект наследует свойства и методы от другого объекта через цепочку прототипов.",
+            "isCorrect": true
+          },
+          {
+            "id": 2,
+            "label": "B",
+            "text": "Каждый объект копирует свойства и методы от своего прототипа при создании.",
+            "isCorrect": false
+          },
+          {
+            "id": 3,
+            "label": "C",
+            "text": "Объекты могут наследовать только методы, но не свойства.",
+            "isCorrect": false
+          },
+          {
+            "id": 4,
+            "label": "D",
+            "text": "Объекты могут наследовать только свойства, но не методы.",
+            "isCorrect": false
+          }
+        ]
+      },
+      {
+        "id": 9,
+        "text": "Как работает замыкание (closure) в JavaScript?",
+        "options": [
+          {
+            "id": 1,
+            "label": "A",
+            "text": "Это функция, которая имеет доступ к своей внешней функции даже после того, как внешняя функция завершила выполнение.",
+            "isCorrect": true
+          },
+          {
+            "id": 2,
+            "label": "B",
+            "text": "Это функция, которая имеет доступ только к своим локальным переменным.",
+            "isCorrect": false
+          },
+          {
+            "id": 3,
+            "label": "C",
+            "text": "Это метод, который вызывается автоматически при создании объекта.",
+            "isCorrect": false
+          },
+          {
+            "id": 4,
+            "label": "D",
+            "text": "Это функция, которая создается с помощью ключевого слова 'class'.",
+            "isCorrect": false
+          }
+        ]
+      },
+      {
+        "id": 10,
+        "text": "Как работает async/await в JavaScript?",
+        "options": [
+          {
+            "id": 1,
+            "label": "A",
+            "text": "Позволяет писать асинхронный код в синхронном стиле, возвращая промисы.",
+            "isCorrect": true
+          },
+          {
+            "id": 2,
+            "label": "B",
+            "text": "Позволяет выполнять асинхронные операции параллельно, без блокировки основного потока.",
+            "isCorrect": false
+          },
+          {
+            "id": 3,
+            "label": "C",
+            "text": "Используется для создания функций, которые автоматически выполняются.",
+            "isCorrect": false
+          },
+          {
+            "id": 4,
+            "label": "D",
+            "text": "Метод для обработки ошибок в асинхронных операциях.",
+            "isCorrect": false
+          }
+        ]
+      },
+      {
+        "id": 11,
+        "text": "Какой результат выполнения следующего кода? `function* gen() { yield 1; yield 2; } const g = gen(); console.log(g.next().value); console.log(g.next().value); console.log(g.next().value);`",
+        "options": [
+          {
+            "id": 1,
+            "label": "A",
+            "text": "1, 2, undefined",
+            "isCorrect": true
+          },
+          {
+            "id": 2,
+            "label": "B",
+            "text": "1, 2, 3",
+            "isCorrect": false
+          },
+          {
+            "id": 3,
+            "label": "C",
+            "text": "undefined, undefined, undefined",
+            "isCorrect": false
+          },
+          {
+            "id": 4,
+            "label": "D",
+            "text": "Ошибка",
+            "isCorrect": false
+          }
+        ]
+      },
+      {
+        "id": 12,
+        "text": "Что такое Symbol в JavaScript?",
+        "options": [
+          {
+            "id": 1,
+            "label": "A",
+            "text": "Примитивный тип данных, представляющий уникальное значение.",
+            "isCorrect": true
+          },
+          {
+            "id": 2,
+            "label": "B",
+            "text": "Специальный объект, который используется для создания уникальных ключей для объектов.",
+            "isCorrect": false
+          },
+          {
+            "id": 3,
+            "label": "C",
+            "text": "Метод, который используется для создания объектов в JavaScript.",
+            "isCorrect": false
+          },
+          {
+            "id": 4,
+            "label": "D",
+            "text": "Класс, который позволяет создавать уникальные идентификаторы для объектов.",
+            "isCorrect": false
+          }
+        ]
+      },
+      {
+        "id": 13,
+        "text": "Какой результат выполнения следующего кода? `let obj = { a: 1, b: 2 }; let copy = { ...obj }; copy.a = 3; console.log(obj.a);`",
+        "options": [
+          {
+            "id": 1,
+            "label": "A",
+            "text": "1",
+            "isCorrect": true
+          },
+          {
+            "id": 2,
+            "label": "B",
+            "text": "3",
+            "isCorrect": false
+          },
+          {
+            "id": 3,
+            "label": "C",
+            "text": "undefined",
+            "isCorrect": false
+          },
+          {
+            "id": 4,
+            "label": "D",
+            "text": "Ошибка",
+            "isCorrect": false
+          }
+        ]
+      },
+      {
+        "id": 14,
+        "text": "Как работает метод Object.create() в JavaScript?",
+        "options": [
+          {
+            "id": 1,
+            "label": "A",
+            "text": "Создает новый объект с указанным прототипом.",
+            "isCorrect": true
+          },
+          {
+            "id": 2,
+            "label": "B",
+            "text": "Создает копию существующего объекта.",
+            "isCorrect": false
+          },
+          {
+            "id": 3,
+            "label": "C",
+            "text": "Создает новый объект с пустым прототипом.",
+            "isCorrect": false
+          },
+          {
+            "id": 4,
+            "label": "D",
+            "text": "Создает новый объект с методами другого объекта.",
+            "isCorrect": false
+          }
+        ]
+      },
+      {
+        "id": 15,
+        "text": "Что такое IIFE (Immediately Invoked Function Expression)?",
+        "options": [
+          {
+            "id": 1,
+            "label": "A",
+            "text": "Функция, которая выполняется сразу после того, как она была определена.",
+            "isCorrect": true
+          },
+          {
+            "id": 2,
+            "label": "B",
+            "text": "Функция, которая выполняется после задержки.",
+            "isCorrect": false
+          },
+          {
+            "id": 3,
+            "label": "C",
+            "text": "Функция, которая выполняется асинхронно.",
+            "isCorrect": false
+          },
+          {
+            "id": 4,
+            "label": "D",
+            "text": "Функция, которая вызывается по завершении события.",
+            "isCorrect": false
+          }
+        ]
+      },
+      {
+        "id": 16,
+        "text": "Какой результат выполнения следующего кода? `let a = 10; (function() { console.log(a); let a = 20; })();`",
+        "options": [
+          {
+            "id": 1,
+            "label": "A",
+            "text": "Ошибка",
+            "isCorrect": true
+          },
+          {
+            "id": 2,
+            "label": "B",
+            "text": "10",
+            "isCorrect": false
+          },
+          {
+            "id": 3,
+            "label": "C",
+            "text": "20",
+            "isCorrect": false
+          },
+          {
+            "id": 4,
+            "label": "D",
+            "text": "undefined",
+            "isCorrect": false
+          }
+        ]
+      },
+      {
+        "id": 17,
+        "text": "Что такое hoisting в JavaScript?",
+        "options": [
+          {
+            "id": 1,
+            "label": "A",
+            "text": "Механизм, при котором объявления переменных и функций перемещаются в начало их контекста выполнения.",
+            "isCorrect": true
+          },
+          {
+            "id": 2,
+            "label": "B",
+            "text": "Механизм, при котором переменные и функции удаляются из контекста выполнения.",
+            "isCorrect": false
+          },
+          {
+            "id": 3,
+            "label": "C",
+            "text": "Механизм, при котором переменные и функции становятся недоступными до их объявления.",
+            "isCorrect": false
+          },
+          {
+            "id": 4,
+            "label": "D",
+            "text": "Механизм, при котором переменные и функции объявляются автоматически.",
+            "isCorrect": false
+          }
+        ]
+      },
+      {
+        "id": 18,
+        "text": "Какой результат выполнения следующего кода? `console.log(0.1 + 0.2 === 0.3);`",
+        "options": [
+          {
+            "id": 1,
+            "label": "A",
+            "text": "false",
+            "isCorrect": true
+          },
+          {
+            "id": 2,
+            "label": "B",
+            "text": "true",
+            "isCorrect": false
+          },
+          {
+            "id": 3,
+            "label": "C",
+            "text": "undefined",
+            "isCorrect": false
+          },
+          {
+            "id": 4,
+            "label": "D",
+            "text": "Ошибка",
+            "isCorrect": false
+          }
+        ]
+      },
+      {
+        "id": 19,
+        "text": "Что такое debounce и throttle в JavaScript?",
+        "options": [
+          {
+            "id": 1,
+            "label": "A",
+            "text": "Это функции, которые позволяют управлять частотой вызова других функций.",
+            "isCorrect": true
+          },
+          {
+            "id": 2,
+            "label": "B",
+            "text": "Это функции, которые отменяют выполнение других функций.",
+            "isCorrect": false
+          },
+          {
+            "id": 3,
+            "label": "C",
+            "text": "Это функции, которые заменяют одни функции на другие.",
+            "isCorrect": false
+          },
+          {
+            "id": 4,
+            "label": "D",
+            "text": "Это функции, которые запускают выполнение других функций с задержкой.",
+            "isCorrect": false
+          }
+        ]
+      },
+      {
+        "id": 20,
+        "text": "Какой результат выполнения следующего кода? `let obj = { a: 1 }; Object.freeze(obj); obj.a = 2; console.log(obj.a);`",
+        "options": [
+          {
+            "id": 1,
+            "label": "A",
+            "text": "1",
+            "isCorrect": true
+          },
+          {
+            "id": 2,
+            "label": "B",
+            "text": "2",
+            "isCorrect": false
+          },
+          {
+            "id": 3,
+            "label": "C",
+            "text": "undefined",
+            "isCorrect": false
+          },
+          {
+            "id": 4,
+            "label": "D",
+            "text": "Ошибка",
+            "isCorrect": false
+          }
+        ]
+      },
+      {
+        "id": 21,
+        "text": "Что такое циклические зависимости (circular dependencies) в JavaScript и как их избежать?",
+        "options": [
+          {
+            "id": 1,
+            "label": "A",
+            "text": "Циклические зависимости возникают, когда два или более модуля зависимы друг от друга, что может вызвать ошибки при загрузке.",
+            "isCorrect": true
+          },
+          {
+            "id": 2,
+            "label": "B",
+            "text": "Циклические зависимости возникают, когда модуль импортирует сам себя.",
+            "isCorrect": false
+          },
+          {
+            "id": 3,
+            "label": "C",
+            "text": "Циклические зависимости - это когда два модуля импортируют один и тот же модуль.",
+            "isCorrect": false
+          },
+          {
+            "id": 4,
+            "label": "D",
+            "text": "Циклические зависимости не вызывают проблем в JavaScript и их можно игнорировать.",
+            "isCorrect": false
+          }
+        ]
+      },
+      {
+        "id": 22,
+        "text": "Как работает метод Promise.all() в JavaScript?",
+        "options": [
+          {
+            "id": 1,
+            "label": "A",
+            "text": "Ожидает завершения всех промисов и возвращает массив их значений.",
+            "isCorrect": true
+          },
+          {
+            "id": 2,
+            "label": "B",
+            "text": "Возвращает первый выполненный промис.",
+            "isCorrect": false
+          },
+          {
+            "id": 3,
+            "label": "C",
+            "text": "Возвращает последний выполненный промис.",
+            "isCorrect": false
+          },
+          {
+            "id": 4,
+            "label": "D",
+            "text": "Ожидает завершения всех промисов и возвращает первый их результат.",
+            "isCorrect": false
+          }
+        ]
+      },
+      {
+        "id": 23,
+        "text": "Какой результат выполнения следующего кода? `let x = {}; console.log(x.__proto__ === Object.prototype);`",
+        "options": [
+          {
+            "id": 1,
+            "label": "A",
+            "text": "true",
+            "isCorrect": true
+          },
+          {
+            "id": 2,
+            "label": "B",
+            "text": "false",
+            "isCorrect": false
+          },
+          {
+            "id": 3,
+            "label": "C",
+            "text": "undefined",
+            "isCorrect": false
+          },
+          {
+            "id": 4,
+            "label": "D",
+            "text": "Ошибка",
+            "isCorrect": false
+          }
+        ]
+      },
+      {
+        "id": 24,
+        "text": "Что такое оператор Spread (...) и как он работает?",
+        "options": [
+          {
+            "id": 1,
+            "label": "A",
+            "text": "Раскрывает элементы массива или свойства объекта.",
+            "isCorrect": true
+          },
+          {
+            "id": 2,
+            "label": "B",
+            "text": "Сокращает элементы массива или свойства объекта.",
+            "isCorrect": false
+          },
+          {
+            "id": 3,
+            "label": "C",
+            "text": "Объединяет два или более массива или объекта.",
+            "isCorrect": false
+          },
+          {
+            "id": 4,
+            "label": "D",
+            "text": "Клонирует массив или объект.",
+            "isCorrect": false
+          }
+        ]
+      },
+      {
+        "id": 25,
+        "text": "Какой результат выполнения следующего кода? `let a = [1, 2, 3]; let b = [...a]; b.push(4); console.log(a);`",
+        "options": [
+          {
+            "id": 1,
+            "label": "A",
+            "text": "[1, 2, 3]",
+            "isCorrect": true
+          },
+          {
+            "id": 2,
+            "label": "B",
+            "text": "[1, 2, 3, 4]",
+            "isCorrect": false
+          },
+          {
+            "id": 3,
+            "label": "C",
+            "text": "Ошибка",
+            "isCorrect": false
+          },
+          {
+            "id": 4,
+            "label": "D",
+            "text": "undefined",
+            "isCorrect": false
+          }
+        ]
+      },
+      {
+        "id": 26,
+        "text": "Что такое временная мертвая зона (Temporal Dead Zone) в JavaScript?",
+        "options": [
+          {
+            "id": 1,
+            "label": "A",
+            "text": "Это период времени, в течение которого переменная объявлена, но не инициализирована.",
+            "isCorrect": true
+          },
+          {
+            "id": 2,
+            "label": "B",
+            "text": "Это период времени, в течение которого переменная инициализирована, но не используется.",
+            "isCorrect": false
+          },
+          {
+            "id": 3,
+            "label": "C",
+            "text": "Это период времени, в течение которого переменная недоступна для сборки мусора.",
+            "isCorrect": false
+          },
+          {
+            "id": 4,
+            "label": "D",
+            "text": "Это период времени, в течение которого переменная доступна только в пределах одной функции.",
+            "isCorrect": false
+          }
+        ]
+      },
+      {
+        "id": 27,
+        "text": "Какой результат выполнения следующего кода? `function foo() { console.log(this); } foo.call(null);`",
+        "options": [
+          {
+            "id": 1,
+            "label": "A",
+            "text": "Глобальный объект (window в браузере, global в Node.js)",
+            "isCorrect": true
+          },
+          {
+            "id": 2,
+            "label": "B",
+            "text": "null",
+            "isCorrect": false
+          },
+          {
+            "id": 3,
+            "label": "C",
+            "text": "undefined",
+            "isCorrect": false
+          },
+          {
+            "id": 4,
+            "label": "D",
+            "text": "Ошибка",
+            "isCorrect": false
+          }
+        ]
+      },
+      {
+        "id": 28,
+        "text": "Как работает метод Object.assign() в JavaScript?",
+        "options": [
+          {
+            "id": 1,
+            "label": "A",
+            "text": "Копирует значения всех перечисляемых собственных свойств из одного или более исходных объектов в целевой объект.",
+            "isCorrect": true
+          },
+          {
+            "id": 2,
+            "label": "B",
+            "text": "Создает новый объект, объединяя два или более объектов.",
+            "isCorrect": false
+          },
+          {
+            "id": 3,
+            "label": "C",
+            "text": "Копирует только методы из одного объекта в другой.",
+            "isCorrect": false
+          },
+          {
+            "id": 4,
+            "label": "D",
+            "text": "Объединяет свойства двух объектов в новый объект.",
+            "isCorrect": false
+          }
+        ]
+      },
+      {
+        "id": 29,
+        "text": "Какой результат выполнения следующего кода? `let func = () => this; console.log(func());`",
+        "options": [
+          {
+            "id": 1,
+            "label": "A",
+            "text": "Глобальный объект (window в браузере, global в Node.js)",
+            "isCorrect": true
+          },
+          {
+            "id": 2,
+            "label": "B",
+            "text": "undefined",
+            "isCorrect": false
+          },
+          {
+            "id": 3,
+            "label": "C",
+            "text": "Ошибка",
+            "isCorrect": false
+          },
+          {
+            "id": 4,
+            "label": "D",
+            "text": "null",
+            "isCorrect": false
+          }
+        ]
+      },
+      {
+        "id": 30,
+        "text": "Как работает метод Function.prototype.bind() в JavaScript?",
+        "options": [
+          {
+            "id": 1,
+            "label": "A",
+            "text": "Создает новую функцию, которая при вызове имеет свое собственное значение this, указанное при ее создании.",
+            "isCorrect": true
+          },
+          {
+            "id": 2,
+            "label": "B",
+            "text": "Создает новую функцию, которая копирует все методы и свойства родительской функции.",
+            "isCorrect": false
+          },
+          {
+            "id": 3,
+            "label": "C",
+            "text": "Создает новую функцию, которая наследует контекст выполнения от родительской функции.",
+            "isCorrect": false
+          },
+          {
+            "id": 4,
+            "label": "D",
+            "text": "Создает новую функцию, которая выполняется только один раз.",
+            "isCorrect": false
+          }
+        ]
+      }
+    ]
+  }
+  
