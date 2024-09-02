@@ -1,5 +1,6 @@
 <script setup>
 import { RouterLink } from "vue-router";
+import {defineEmits} from "vue";
 
 const emit = defineEmits(["nextQuestion"]);
 const nextQuestion = () => {

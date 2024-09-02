@@ -1,32 +1,33 @@
 <script setup>
+import { defineProps, defineEmits } from "vue";
 
-
-import { defineProps } from "vue";
 const { question } = defineProps(["question"]);
+const emit = defineEmits(["selectAnswer"]);
 
-
-
-
+const selectAnswer = (isCorrect) => {
+  emit("selectAnswer", isCorrect);
+};
 </script>
 
 <template>
   <div>
-
-      <div class="option"v-for="question in question.options" :key="question.id">
-        <div class="option_number" >
-          <p>{{ question.label}}</p>
-        </div>
-        <div class="option_answer">
-          <p>{{question.text}}</p>
-        </div>
+    <div
+      class="option"
+      v-for="question in question.options"
+      :key="question.id"
+      @click="selectAnswer(question.isCorrect)"
+    >
+      <div class="option_number">
+        <p>{{ question.label }}</p>
+      </div>
+      <div class="option_answer">
+        <p>{{ question.text }}</p>
       </div>
     </div>
-
-
+  </div>
 </template>
 
 <style scoped>
-
 .option {
   display: flex;
   gap: 10px;
@@ -51,7 +52,7 @@ const { question } = defineProps(["question"]);
   padding: 10px;
   border-radius: 5px;
   cursor: pointer;
-  transition: all 0.3s ease;  
+  transition: all 0.3s ease;
 }
 
 .option_answer {
