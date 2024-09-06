@@ -4,8 +4,12 @@ import headerQuiz from "./headerQuiz.vue";
 import buttonQuiz from "./buttonQuiz.vue";
 import resultQize from "../results/resultQize.vue";
 import { useRoute } from "vue-router";
-import { ref, watch, computed } from "vue";
+import { ref, watch, computed, defineProps, defineEmits } from "vue";
 import quizes from "../../data/quizes.json";
+
+const emit = defineEmits(["getUser"]);
+
+const { currentUserId } = defineProps(["currentUserId"]);
 
 const router = useRoute();
 const quizId = parseInt(router.params.id);
@@ -13,12 +17,15 @@ const currentQuizesId = ref(0);
 const quiz = quizes.find((q) => q.id === quizId);
 
 const quizResult = ref({
+  name: "user.name",
   incorrect: 0,
   correct: 0,
   quizCompleted: false,
-
 });
 
+console.log(currentUserId);
+
+// console.log(currentUserId, users);
 // const questionsNumber = ref(`${currentQuizesId.value + 1}`);
 
 // watch(currentQuizesId, () => {
@@ -34,6 +41,7 @@ const prosentProgress = computed(() => {
 });
 
 const nextQuestion = () => {
+  skipQuestion();
   changeQuestionsNumber();
 };
 
@@ -42,6 +50,14 @@ const changeQuestionsNumber = () => {
     currentQuizesId.value++;
     // questionsNumber.value = `${currentQuizesId.value + 1}`
     return;
+  }
+};
+
+const skipQuestion = () => {
+  !quizResult.value.quizCompleted ? quizResult.value.incorrect++ : null;
+  // console.log(quizResult.value.incorrect);
+  if (currentQuizesId.value === quiz.questions.length - 1) {
+    quizResult.value.quizCompleted = true;
   }
 };
 
@@ -68,13 +84,17 @@ const getSelectedAnswer = (isCorrect) => {
       :questionsNumber="questionsNumber"
     />
     <div class="options-container">
-      <questions v-if = "!quizResult.quizCompleted"
+      <questions
+        v-if="!quizResult.quizCompleted"
         :question="quiz.questions[currentQuizesId]"
         @selectAnswer="getSelectedAnswer"
       />
       <resultQize v-else :quizResult="quizResult" />
     </div>
-    <buttonQuiz @nextQuestion="nextQuestion" />
+    <buttonQuiz
+      @nextQuestion="nextQuestion"
+      :quizCompleted="quizResult.quizCompleted"
+    />
   </div>
 </template>
 

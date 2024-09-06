@@ -1,18 +1,26 @@
 <script setup>
 import { RouterLink } from "vue-router";
-import {defineEmits} from "vue";
+import { defineEmits, defineProps } from "vue";
+
+const { quizCompleted } = defineProps(["quizCompleted"]);
+console.log(quizCompleted);
 
 const emit = defineEmits(["nextQuestion"]);
 const nextQuestion = () => {
   emit("nextQuestion");
+  console.log(quizCompleted);
 };
 </script>
 
 <template>
   <div>
     <div class="btn_container">
-      <button class="next-btn" @click="nextQuestion">Следующий вопрос</button>
-      <RouterLink to="/"><button class="end-btn">Завершить</button></RouterLink>
+      <button class="next-btn" @click="nextQuestion" v-if="!quizCompleted">
+        Пропустить вопрос
+      </button>
+      <RouterLink to="/home"
+        ><button class="end-btn">Завершить</button></RouterLink
+      >
     </div>
   </div>
 </template>
