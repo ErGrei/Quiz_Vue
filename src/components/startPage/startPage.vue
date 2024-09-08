@@ -1,18 +1,31 @@
 <script setup>
 import { RouterLink } from "vue-router";
-import { ref } from "vue";
-import Users from "../users/Users.vue";
+import { defineEmits, ref } from "vue";
 
 const users = ref({
   id: Date.now(),
   name: "",
   resultsQuiz: [],
 });
+
+const emit = defineEmits(["addUser"]);
+
+const addUser = () => {
+  // console.log(users.value); 
+  if (users.value.name) {
+    emit("addUser", users.value); 
+  } else {
+    console.error("Имя пользователя не может быть пустым");
+  }
+};
+
 </script>
 
 <template>
-  <div сlass="start-page">
-    <header class="header"><h1 class="title">Quiz App</h1></header>
+  <div class="start-page">
+    <header class="header">
+      <h1 class="title">Quiz App</h1>
+    </header>
     <div class="title__container">
       <input
         class="input"
@@ -21,21 +34,19 @@ const users = ref({
         v-model="users.name"
       />
     </div>
-    <RouterLink class="btn" to="/home" @click="$emit('addUser', users)">
-      Начать
-    </RouterLink>
+    <button class="btn" @click="addUser">Начать</button>
   </div>
 </template>
 
 <style scoped>
-.start-page {
+/* .start-page {
   width: 100vw;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   height: 100vh;
-}
+} */
 
 .header {
   margin: 30px 0;

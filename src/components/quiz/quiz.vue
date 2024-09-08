@@ -9,8 +9,6 @@ import quizes from "../../data/quizes.json";
 
 const emit = defineEmits(["getUser"]);
 
-const { currentUserId } = defineProps(["currentUserId"]);
-
 const router = useRoute();
 const quizId = parseInt(router.params.id);
 const currentQuizesId = ref(0);
@@ -23,7 +21,7 @@ const quizResult = ref({
   quizCompleted: false,
 });
 
-console.log(currentUserId);
+
 
 // console.log(currentUserId, users);
 // const questionsNumber = ref(`${currentQuizesId.value + 1}`);
