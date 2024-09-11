@@ -11,9 +11,10 @@ const users = ref({
 const emit = defineEmits(["addUser"]);
 
 const addUser = () => {
-  // console.log(users.value); 
+   
   if (users.value.name) {
     emit("addUser", users.value); 
+    console.log(users.value);
   } else {
     console.error("Имя пользователя не может быть пустым");
   }
