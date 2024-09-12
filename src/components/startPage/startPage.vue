@@ -35,7 +35,7 @@ const addUser = () => {
         v-model="users.name"
       />
     </div>
-    <button class="btn" @click="addUser">Начать</button>
+    <RouterLink to="/home" class="btn" @click="addUser">Начать</RouterLink>
   </div>
 </template>
 
