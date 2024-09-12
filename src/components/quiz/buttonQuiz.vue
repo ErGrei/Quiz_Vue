@@ -18,7 +18,7 @@ const nextQuestion = () => {
       <button class="next-btn" @click="nextQuestion" v-if="!quizCompleted">
         Пропустить вопрос
       </button>
-      <RouterLink to="/home"
+      <RouterLink to="/Quiz_Vue/dist/home"
         ><button class="end-btn">Завершить</button></RouterLink
       >
     </div>

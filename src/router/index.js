@@ -7,17 +7,17 @@ const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
   routes: [
     {
-      path: "/",
+      path: "/Quiz_Vue/dist/",
       name: "start",
       component: startPage,
     },
     {
-      path: "/home",
+      path: "/Quiz_Vue/dist/home",
       name: "home",
       component: Home,
     },
     {
-      path: "/quiz/:id",
+      path: "/Quiz_Vue/dist/quiz/:id",
       name: "quiz",
       component: Quiz,
     },
