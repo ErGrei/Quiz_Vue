@@ -23,7 +23,7 @@ export default defineConfig(({ command }) => {
   };
 
   if (command === "build")
-    setting.base = "https://ergrei.github.io/Quiz_Vue/dist/";
+    setting.base = "https://ergrei.github.io/Quiz_Vue/";
 
   return setting;
 });
