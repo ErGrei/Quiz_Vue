@@ -1,12 +1,12 @@
 <script setup>
-// import { RouterView } from "vue-router";
-import startPage from './components/startPage/startPage.vue';
+import { RouterView } from "vue-router";
+// import startPage from './components/startPage/startPage.vue';
 </script>
 
 <template>
   <div class="container">
-    <startPage />
-    <!-- <RouterView /> -->
+    <!-- <startPage /> -->
+    <RouterView />
   </div>
 </template>
 
