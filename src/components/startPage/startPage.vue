@@ -35,7 +35,7 @@ const addUser = () => {
         v-model="users.name"
       />
     </div>
-    <RouterLink to="/Quiz_Vue/dist/home" class="btn" @click="addUser">Начать</RouterLink>
+    <RouterLink to="/home" class="btn" @click="addUser">Начать</RouterLink>
   </div>
 </template>
 
