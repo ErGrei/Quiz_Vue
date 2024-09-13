@@ -22,8 +22,8 @@ export default defineConfig(({ command }) => {
     plugins: [vue()],
   };
 
-  if (command === "build")
-    setting.base = "https://ergrei.github.io/Quiz_Vue/";
+  // if (command === "build")
+  //   setting.base = "https://ergrei.github.io/Quiz_Vue/";
 
   return setting;
 });
