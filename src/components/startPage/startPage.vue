@@ -1,6 +1,13 @@
 <script setup>
 import { RouterLink } from "vue-router";
 import { defineEmits, ref } from "vue";
+import{useUsersStore} from "../../stores/usersStore";
+
+const usersStore = useUsersStore();
+
+const usersRef = ref(usersStore.users);
+
+const addUser = usersStore.addUser;
 
 const users = ref({
   id: Date.now(),
@@ -8,13 +15,12 @@ const users = ref({
   resultsQuiz: [],
 });
 
-const emit = defineEmits(["addUser"]);
+// const emit = defineEmits(["addUser"]);
 
-const addUser = () => {
+const validateUser = (users) => {
    
-  if (users.value.name) {
-    emit("addUser", users.value); 
-    console.log(users.value);
+  if (users.name) {
+    addUser(users);
   } else {
     console.error("Имя пользователя не может быть пустым");
   }
@@ -26,6 +32,7 @@ const addUser = () => {
   <div class="start-page">
     <header class="header">
       <h1 class="title">Quiz App</h1>
+      <h3 class="title">{{usersStore.users}}</h3>
     </header>
     <div class="title__container">
       <input
@@ -35,7 +42,7 @@ const addUser = () => {
         v-model="users.name"
       />
     </div>
-    <RouterLink to="/home" class="btn" @click="addUser">Начать</RouterLink>
+    <RouterLink to="/home" class="btn" @click="validateUser(users)">Начать</RouterLink>
   </div>
 </template>
 
