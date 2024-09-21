@@ -1,50 +1,61 @@
 <script setup>
-import { RouterLink } from "vue-router";
-import { defineEmits, ref } from "vue";
-import{useUsersStore} from "../../stores/usersStore";
+import { ref } from "vue";
+import { useRouter } from "vue-router"; 
+import { useUsersStore } from "../../stores/usersStore";
+import { useVuelidate } from "@vuelidate/core";
+import { required } from "@vuelidate/validators";
+
 
 const usersStore = useUsersStore();
-
-const usersRef = ref(usersStore.users);
-
 const addUser = usersStore.addUser;
+const router = useRouter(); 
 
-const users = ref({
+const user = ref({
   id: Date.now(),
   name: "",
   resultsQuiz: [],
 });
 
-// const emit = defineEmits(["addUser"]);
 
-const validateUser = (users) => {
-   
-  if (users.name) {
-    addUser(users);
-  } else {
-    console.error("Имя пользователя не может быть пустым");
-  }
+const rules = {
+  name: { required }
 };
 
+const v$ = useVuelidate(rules, user);
+
+const validateUser = async () => {
+  const isValid = await v$.value.$validate();
+
+  if (isValid) {
+    addUser(user.value);
+    router.push("/home");
+  } else {
+    console.log("Валидация не пройдена");
+  }
+};
 </script>
 
 <template>
   <div class="start-page">
     <header class="header">
       <h1 class="title">Quiz App</h1>
-      <h3 class="title">{{usersStore.users}}</h3>
     </header>
     <div class="title__container">
       <input
         class="input"
         type="text"
         placeholder="Введите имя"
-        v-model="users.name"
+        v-model="user.name"
       />
+      <span v-if="v$.name.$invalid && v$.name.$dirty" class="error">
+        Поле обязательно для заполнения
+      </span>
     </div>
-    <RouterLink to="/home" class="btn" @click="validateUser(users)">Начать</RouterLink>
+    <button class="btn" @click.prevent="validateUser">Начать</button>
   </div>
 </template>
+
+
 
 <style scoped>
 /* .start-page {
@@ -104,5 +115,9 @@ const validateUser = (users) => {
 
 .btn:active {
   transform: scale(0.98);
+}
+
+.error {
+  color: red;
 }
 </style>

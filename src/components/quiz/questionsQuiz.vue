@@ -32,7 +32,7 @@ const selectAnswer = (isCorrect) => {
   display: flex;
   gap: 10px;
   margin-bottom: 10px;
-  border: 1px, solid, #6ce7e9;
+  border: 1px solid #6ce7e9;
   padding: 10px;
   border-radius: 5px;
   cursor: pointer;
@@ -48,7 +48,7 @@ const selectAnswer = (isCorrect) => {
   display: flex;
   gap: 10px;
   margin-bottom: 10px;
-  border: 1px, solid, #6ce7e9;
+  border: 1px solid #6ce7e9;
   padding: 10px;
   border-radius: 5px;
   cursor: pointer;
@@ -60,7 +60,7 @@ const selectAnswer = (isCorrect) => {
   display: flex;
   gap: 10px;
   margin-bottom: 10px;
-  border: 1px, solid, #6ce7e9;
+  border: 1px solid #6ce7e9;
   padding: 10px;
   border-radius: 5px;
   cursor: pointer;
